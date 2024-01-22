@@ -11,7 +11,7 @@ app.get('/test', (req,res) => {
 })
  
 const PORT = process.env.PORT || 3000
-app.listen(port, () =>
+app.listen(PORT, () =>
 console.log(`Servidor levantado correctamente en: http://localhost:${PORT}`));
 
 app.use(express.static('public'));
