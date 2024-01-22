@@ -10,6 +10,8 @@ app.get('/test', (req,res) => {
     res.sendFile(path.join(__dirname, '/views/test.html'))
 })
  
-app.listen(3000, () =>
-console.log('Servidor levantado correctamente'));
+const port = process.env.PORT || 3000
+app.listen(port, () =>
+console.log(`Servidor levantado correctamente en: http://localhost:${PORT}`));
+
 app.use(express.static('public'));
