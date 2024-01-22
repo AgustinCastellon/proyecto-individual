@@ -10,7 +10,7 @@ app.get('/test', (req,res) => {
     res.sendFile(path.join(__dirname, '/views/test.html'))
 })
  
-const port = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000
 app.listen(port, () =>
 console.log(`Servidor levantado correctamente en: http://localhost:${PORT}`));
 
