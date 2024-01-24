@@ -26,23 +26,29 @@ header{
 div.top-header{
     display: flex;
     flex-wrap: wrap;
-    padding: 5%;
+    padding-left: 20px;
+    flex-direction: row;
+    justify-content: start;
+    width: 100%;
 }
 
 header div.logo,
 header .form{
-    width: 50%;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 header .form{
     display: flex;
     align-items: center;
-    padding: 2px;
     font-size: 11px;
 }
 
 header div.logo{
-    padding: 10px;
+    justify-content: start;
+    width: 30%;
+    
 }
 
 header ul li{
@@ -69,9 +75,9 @@ header .form .input{
 
 header .form .submit{
     background-color: #FFF;
+    color: #0044AA;
     border: 1px solid #000;
-    color: #666;
-    width: 10%;
+    width: 2.5%;
 }
 
 div.burger-menu{
@@ -185,11 +191,34 @@ main section h3{
 }
 
 footer{
+    position: relative;
     padding: 20px 15px;
     background-color: white;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+section div.foter-article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space;
+    align-items: center;
+    margin: 5px 15px;
+    padding-bottom: 5px;
+}
+
+footer section div p{
+    text-align: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
+}
+
+footer section i{
+    font-size: 31px;
+    color: #0044AA;
+    padding-bottom: 4px;
 }
 
 footer section{
@@ -198,16 +227,15 @@ footer section{
 }
 
 #copyright{
-    padding-top: 15px;
-    padding-left: 700px;
-    font-size: 15px;
+    display: flex;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    color: grey;
 }
 
-
 @media (min-width: 361px){
-    main section article .description{
-        display: block;
-    }
+    
 
     main section article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -227,12 +255,70 @@ footer section{
 
     .price,
     .discount{
-        width: 50%;
+        width: 50%;   
     }
+
+    header .form .submit{
+        width: 15px;
+    }
+
 }
 
 @media (min-width: 769px){
+
+    body header .top-header .form{
+        width: 15%;
+    }
+
+    body header .top-header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body header nav{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    body header nav ul{
+        display: flex;
+        box-sizing: content-box;
+        width: 25%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+
+    body header .burger-menu i{
+        display: none;
+    }
+
     main section div.products article{
         width: 22%;
+    }
+}
+
+@media (max-width: 768px){
+    main section article .descripciones{
+        display: none;
+    }
+
+    main section article .main-article{
+        display: block;
+    }
+
+    footer section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    header .form .submit{
+        width: 15px;
     }
 }
